@@ -76,7 +76,7 @@ function mici_edit {
     git clone https://aur.archlinux.org/mkinitcpio-firmware.git
     cd mkinitcpio-firmware || exit
     makepkg -sric
-    cd "$INIT_DIR"
+    cd "$INIT_DIR" || exit
 
 		echo -n -e "$LA Are you using btrfs? [Y/n]: "
 		read -r UC
